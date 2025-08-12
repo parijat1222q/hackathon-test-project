@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+pytesseract
+Pillow
+pdf2image
+weasyprint
+python-dotenv
+requests
+python-multipart
+transformers
+scikit-learn
+pandas
+numpy
+jinja2
+torch

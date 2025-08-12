@@ -1,0 +1,4 @@
+[
+  {"name": "Amoxicillin", "dose": "500 mg", "freq": "TID", "duration": "5 days"},
+  {"name": "Paracetamol", "dose": "500 mg", "freq": "BID", "duration": "3 days"}
+]

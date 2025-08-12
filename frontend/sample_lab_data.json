@@ -1,0 +1,5 @@
+[
+  {"param": "Hemoglobin", "value": 10.2, "unit": "g/dL", "ref_range": "13.5-17.5", "status": "low"},
+  {"param": "WBC", "value": 6.2, "unit": "10^3/uL", "ref_range": "4.0-11.0", "status": "normal"},
+  {"param": "Glucose", "value": 160, "unit": "mg/dL", "ref_range": "70-100", "status": "high"}
+]

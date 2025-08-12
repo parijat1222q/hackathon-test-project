@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MedScan Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f8fafc; color: #222; }
+        h1, h2 { color: #2563eb; }
+        table { border-collapse: collapse; width: 100%; margin-bottom: 1em; }
+        th, td { border: 1px solid #cbd5e1; padding: 8px; text-align: left; }
+        th { background: #e0e7ef; }
+        tr:nth-child(even) { background: #f1f5f9; }
+        ul { margin: 0; padding: 0 0 0 1em; }
+    </style>
+</head>
+<body>
+    <h1>MedScan Report</h1>
+    <h2>Lab Results</h2>
+    <table>
+        <tr><th>Parameter</th><th>Value</th><th>Unit</th><th>Ref Range</th><th>Status</th></tr>
+        {% for r in lab_results %}
+        <tr>
+            <td>{{ r.param }}</td>
+            <td>{{ r.value }}</td>
+            <td>{{ r.unit }}</td>
+            <td>{{ r.ref_range }}</td>
+            <td>{{ r.status }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <h2>Medicines</h2>
+    <table>
+        <tr><th>Name</th><th>Dosage</th><th>Frequency</th><th>Duration</th></tr>
+        {% for m in medicines %}
+        <tr>
+            <td>{{ m.name }}</td>
+            <td>{{ m.dose }}</td>
+            <td>{{ m.freq }}</td>
+            <td>{{ m.duration }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <h2>Crosscheck Notes</h2>
+    <ul>
+        {% for n in crosscheck %}
+        <li>{{ n.note }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
